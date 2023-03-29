@@ -13,4 +13,4 @@ pip install git+https://...
 """
 from setuptools import setup
 
-setup(name="pipen-annotate")
+setup(name="pipen-lock")

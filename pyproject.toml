@@ -8,8 +8,8 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.7.1"
-pipen = "^0.6"
-filelock = "^3.9"
+pipen = "^0.7"
+filelock = "^3"
 
 [tool.poetry.plugins.pipen]
 lock = "pipen_lock:PipenLockPlugin"
