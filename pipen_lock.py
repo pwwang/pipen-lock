@@ -39,3 +39,6 @@ class PipenLockPlugin:
     @plugin.impl
     async def on_proc_done(self, proc: Proc, succeeded: bool):
         self.lock.release(True)
+
+
+pipen_lock_plugin = PipenLockPlugin()

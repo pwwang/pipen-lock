@@ -12,7 +12,7 @@ pipen = "^0.7"
 filelock = "^3"
 
 [tool.poetry.plugins.pipen]
-lock = "pipen_lock:PipenLockPlugin"
+lock = "pipen_lock:pipen_lock_plugin"
 
 [tool.poetry.build]
 generate-setup-file = true
