@@ -8,7 +8,7 @@ from filelock import FileLock, Timeout
 if TYPE_CHECKING:  # pragma: no cover
     from pipen import Proc
 
-__version__ = "0.6.0"
+__version__ = "0.7.0"
 
 logger = get_logger("lock", "info")
 
