@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pipen-lock"
-version = "0.8.0"
+version = "0.8.1"
 description = "Process lock for pipen to prevent multiple runs at the same time"
 authors = ["pwwang <pwwang@pwwang.com>"]
 license = "MIT"

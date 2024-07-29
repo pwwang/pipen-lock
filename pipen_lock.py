@@ -8,7 +8,7 @@ from filelock import FileLock, SoftFileLock, Timeout
 if TYPE_CHECKING:  # pragma: no cover
     from pipen import Pipen, Proc
 
-__version__ = "0.8.0"
+__version__ = "0.8.1"
 
 logger = get_logger("lock", "info")
 
