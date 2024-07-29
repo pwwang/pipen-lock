@@ -18,6 +18,13 @@ from pipen import Proc, Pipen
 # process definition
 
 class MyPipeline(Pipen):
-    plugins = ["no:lock"]
+    plugins = ["-lock"]
 
 ```
+
+## Configuration
+
+- `lock_soft`: Whether to use soft lock. Default: `False`
+    non-soft lock is platform dependent while soft lock only watches the existence of the lock file.
+    See more details <https://py-filelock.readthedocs.io/en/latest/index.html#filelock-vs-softfilelock>
+    for the difference between `FileLock` and `SoftFileLock`
