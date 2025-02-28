@@ -129,6 +129,7 @@ dmypy.json
 .pyre/
 
 /test.py
-/.pipen/
+.pipen/
 /*_results/
 /*-output/
+gac_key.json

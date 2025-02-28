@@ -8,7 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-pipen = "^0.15.0"
+pipen-annotate = { version = "^0.15.0a1", allow-prereleases = true }
 filelock = "^3"
 
 [tool.poetry.plugins.pipen]
@@ -16,6 +16,10 @@ lock = "pipen_lock:pipen_lock_plugin"
 
 [tool.poetry.build]
 generate-setup-file = true
+
+[tool.poetry.group.examples.dependencies]
+python-dotenv = "^1.0"
+google-cloud-storage = "^3"
 
 [build-system]
 requires = ["poetry-core"]
