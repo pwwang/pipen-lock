@@ -399,13 +399,13 @@ requests = ["requests (>=2.18.0,<3.0.0dev)"]
 
 [[package]]
 name = "googleapis-common-protos"
-version = "1.68.0"
+version = "1.69.0"
 description = "Common protobufs used in Google APIs"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "googleapis_common_protos-1.68.0-py2.py3-none-any.whl", hash = "sha256:aaf179b2f81df26dfadac95def3b16a95064c76a5f45f07e4c68a21bb371c4ac"},
-    {file = "googleapis_common_protos-1.68.0.tar.gz", hash = "sha256:95d38161f4f9af0d9423eed8fb7b64ffd2568c3464eb542ff02c5bfa1953ab3c"},
+    {file = "googleapis_common_protos-1.69.0-py2.py3-none-any.whl", hash = "sha256:17835fdc4fa8da1d61cfe2d4d5d57becf7c61d4112f8d81c67eaa9d7ce43042d"},
+    {file = "googleapis_common_protos-1.69.0.tar.gz", hash = "sha256:5a46d58af72846f59009b9c4710425b9af2139555c71837081706b213b298187"},
 ]
 
 [package.dependencies]
@@ -812,13 +812,13 @@ executing = ">=2.0,<3.0"
 
 [[package]]
 name = "pipen"
-version = "0.16.0a4"
+version = "0.16.0"
 description = "A pipeline framework for python"
 optional = false
 python-versions = "<4.0,>=3.9"
 files = [
-    {file = "pipen-0.16.0a4-py3-none-any.whl", hash = "sha256:df95e8afbbf48e8e8cbea0077666f8c0aee031ce31e098139992a34554c33246"},
-    {file = "pipen-0.16.0a4.tar.gz", hash = "sha256:afc8246456552353eef126d4152154454ea628c1dea26c4964229f29d98b96e6"},
+    {file = "pipen-0.16.0-py3-none-any.whl", hash = "sha256:0a824bf416469bea6957432647ef9e4342786dba01b2657aa183e22ceef9f607"},
+    {file = "pipen-0.16.0.tar.gz", hash = "sha256:5343fd3178ffe8716ab71426fbda9087bce202c0dade78003aa231875f0fa8c7"},
 ]
 
 [package.dependencies]
@@ -833,17 +833,17 @@ xqute = ">=0.8,<0.9"
 
 [[package]]
 name = "pipen-annotate"
-version = "0.15.0a1"
+version = "0.15.0"
 description = "Use docstring to annotate pipen processes"
 optional = false
 python-versions = "<4.0,>=3.9"
 files = [
-    {file = "pipen_annotate-0.15.0a1-py3-none-any.whl", hash = "sha256:9bef8ea5fd20ac7bfea01ddfe4d42f592cdd537a1cc88ffcbdbb90140267f56e"},
-    {file = "pipen_annotate-0.15.0a1.tar.gz", hash = "sha256:b372fddb9dafe7a98ee0b3a24ac731316ab9430cbaab82fc4410da50ba8d768c"},
+    {file = "pipen_annotate-0.15.0-py3-none-any.whl", hash = "sha256:a08fa3a91a8656a11d87e5fa8eb43af544e3cf987534929a643f919d3460f7ea"},
+    {file = "pipen_annotate-0.15.0.tar.gz", hash = "sha256:648d7162756251b1773af922747cd78b939ac93dffee53eac32f0a4f5733067c"},
 ]
 
 [package.dependencies]
-pipen = ">=0.16.0a1,<0.17.0"
+pipen = ">=0.16.0,<0.17.0"
 
 [[package]]
 name = "prefixed"
@@ -1307,13 +1307,13 @@ files = [
 
 [[package]]
 name = "xqute"
-version = "0.8.0"
+version = "0.8.1"
 description = "A job management system for python"
 optional = false
 python-versions = "<4.0,>=3.9"
 files = [
-    {file = "xqute-0.8.0-py3-none-any.whl", hash = "sha256:ea0ba79131a0374d1561bfea430ea49e623e2eaa755971ca43be157b461aa3b5"},
-    {file = "xqute-0.8.0.tar.gz", hash = "sha256:b16dc828cc9ae9446829ab97314b53d26b0aa1eafdf5d7fd594e4ae945840f4f"},
+    {file = "xqute-0.8.1-py3-none-any.whl", hash = "sha256:dc8b98595e8cd96965e05640adc816d34a9d80e9603d9d1682749fa75950a40c"},
+    {file = "xqute-0.8.1.tar.gz", hash = "sha256:98797770cb33a0af5de3eadfe0810fb2520d0d1ee3679beaabede042f306cbd0"},
 ]
 
 [package.dependencies]
@@ -1345,4 +1345,4 @@ cloudpathlib = ">=0.20.0,<0.21.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "6ec1589dc2b2532be843a76c8373fd3cad787d0aca66e5e83ca1769af6548289"
+content-hash = "c47fe251cde838a0659546063ec7d3a3ca6f07799bb764f7ed6ca4acfdc51f9d"
