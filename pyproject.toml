@@ -8,7 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-pipen-annotate = "^0.15.0"
+pipen = "0.17.*"
 filelock = "^3"
 
 [tool.poetry.plugins.pipen]
