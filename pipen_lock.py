@@ -1,5 +1,5 @@
 from __future__ import annotations
-from time import sleep
+import asyncio
 from typing import TYPE_CHECKING
 
 from panpath import PanPath, CloudPath
@@ -29,7 +29,7 @@ class CloudFileLock:
         """Acquire the lock."""
         if blocking:
             while await self.lockfile.a_exists():
-                sleep(0.1)  # Add sleep to prevent CPU hogging
+                await asyncio.sleep(0.1)  # Add sleep to prevent CPU hogging
 
         # Create lock file when acquired
         if await self.lockfile.a_exists():
@@ -52,6 +52,18 @@ class PipenLockPlugin:
     def __init__(self):
         self.lock = None
 
+    async def _acquire_lock(self, blocking: bool = True):
+        """Acquire the given lock."""
+        locked = self.lock.acquire(blocking=blocking)
+        if isinstance(self.lock, CloudFileLock):
+            await locked
+
+    async def _release_lock(self, force: bool = False):
+        """Release the given lock."""
+        released = self.lock.release(force=force)
+        if isinstance(self.lock, CloudFileLock):
+            await released
+
     @plugin.impl
     async def on_init(self, pipen: Pipen):
         pipen.config.plugin_opts.setdefault("lock_soft", False)
@@ -62,8 +74,7 @@ class PipenLockPlugin:
             self.lock = CloudFileLock(proc.workdir / "proc.lock")
             msg = [
                 "Process locked, likely handled by another pipeline instance",
-                "If not, remove the lock file manually: "
-                f"{self.lock.lockfile}",
+                "If not, remove the lock file manually: " f"{self.lock.lockfile}",
             ]
 
         elif proc.plugin_opts.lock_soft:
@@ -78,18 +89,18 @@ class PipenLockPlugin:
             msg = ["Process locked, likely handled by another pipeline instance"]
 
         try:
-            await self.lock.acquire(blocking=False)
+            await self._acquire_lock(blocking=False)
         except Timeout:
             for m in msg:
                 proc.log("warning", m, logger=logger)
         else:
-            await self.lock.release()
+            await self._release_lock()
 
-        await self.lock.acquire()
+        await self._acquire_lock()
 
     @plugin.impl
     async def on_proc_done(self, proc: Proc, succeeded: bool):
-        await self.lock.release(True)
+        await self._release_lock(force=True)
 
 
 pipen_lock_plugin = PipenLockPlugin()
